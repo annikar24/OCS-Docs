@@ -20,8 +20,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>
 
 <h3>Response</h3>
 
@@ -75,7 +75,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources
               "SuccessfulStreamEdits": null,
               "FailedStreamEdits": null,
               "PointEdits": null,
-              "TotalPoints": null,
+              "TotalPointsInTransfer": null,
               "AssetsCreatedPerSecond": null,
               "AssetsProcessedCount": null,
               "TotalAssetsInTransfer": null,
@@ -152,7 +152,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources
         "SuccessfulStreamEdits": 0,
         "FailedStreamEdits": 0,
         "PointEdits": 0,
-        "TotalPoints": 0,
+        "TotalPointsInTransfer": 0,
         "AssetsCreatedPerSecond": 0,
         "AssetsProcessedCount": 0,
         "TotalAssetsInTransfer": 0,
@@ -190,8 +190,8 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>
 
 <h4>Request Body</h4>
 
@@ -255,7 +255,7 @@ The DataSourceCreateUpdateDto to use when creating the DataSource.<br/>
             "SuccessfulStreamEdits": 0,
             "FailedStreamEdits": 0,
             "PointEdits": 0,
-            "TotalPoints": 0,
+            "TotalPointsInTransfer": 0,
             "AssetsCreatedPerSecond": 0,
             "AssetsProcessedCount": 0,
             "TotalAssetsInTransfer": 0,
@@ -334,7 +334,7 @@ The DataSourceCreateUpdateDto to use when creating the DataSource.<br/>
       "SuccessfulStreamEdits": 0,
       "FailedStreamEdits": 0,
       "PointEdits": 0,
-      "TotalPoints": 0,
+      "TotalPointsInTransfer": 0,
       "AssetsCreatedPerSecond": 0,
       "AssetsProcessedCount": 0,
       "TotalAssetsInTransfer": 0,
@@ -371,8 +371,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the requested DataSource.<br/><br/>
 
 <h3>Response</h3>
@@ -426,7 +426,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
             "SuccessfulStreamEdits": 0,
             "FailedStreamEdits": 0,
             "PointEdits": 0,
-            "TotalPoints": 0,
+            "TotalPointsInTransfer": 0,
             "AssetsCreatedPerSecond": 0,
             "AssetsProcessedCount": 0,
             "TotalAssetsInTransfer": 0,
@@ -505,7 +505,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
       "SuccessfulStreamEdits": 0,
       "FailedStreamEdits": 0,
       "PointEdits": 0,
-      "TotalPoints": 0,
+      "TotalPointsInTransfer": 0,
       "AssetsCreatedPerSecond": 0,
       "AssetsProcessedCount": 0,
       "TotalAssetsInTransfer": 0,
@@ -542,8 +542,8 @@ PUT /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource to replace.<br/><br/>
 
 <h4>Request Body</h4>
@@ -609,7 +609,7 @@ The new property values that will be set on the DataSource.<br/>
             "SuccessfulStreamEdits": 0,
             "FailedStreamEdits": 0,
             "PointEdits": 0,
-            "TotalPoints": 0,
+            "TotalPointsInTransfer": 0,
             "AssetsCreatedPerSecond": 0,
             "AssetsProcessedCount": 0,
             "TotalAssetsInTransfer": 0,
@@ -688,7 +688,7 @@ The new property values that will be set on the DataSource.<br/>
       "SuccessfulStreamEdits": 0,
       "FailedStreamEdits": 0,
       "PointEdits": 0,
-      "TotalPoints": 0,
+      "TotalPointsInTransfer": 0,
       "AssetsCreatedPerSecond": 0,
       "AssetsProcessedCount": 0,
       "TotalAssetsInTransfer": 0,
@@ -725,8 +725,8 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource to be deleted.<br/><br/>
 
 <h3>Response</h3>
@@ -754,8 +754,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/PISystems
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>
 
 <h3>Response</h3>
 
@@ -796,7 +796,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/PISystems
           "SuccessfulStreamEdits": 0,
           "FailedStreamEdits": 0,
           "PointEdits": 0,
-          "TotalPoints": 0,
+          "TotalPointsInTransfer": 0,
           "AssetsCreatedPerSecond": 0,
           "AssetsProcessedCount": 0,
           "TotalAssetsInTransfer": 0,
@@ -884,8 +884,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/DataPriva
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>
 
 <h3>Response</h3>
 
@@ -940,8 +940,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the requested DataSource.<br/><br/>`string agentId`
 <br/>The Id of the requested Agent.<br/><br/>
 
@@ -990,7 +990,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
           "SuccessfulStreamEdits": 0,
           "FailedStreamEdits": 0,
           "PointEdits": 0,
-          "TotalPoints": 0,
+          "TotalPointsInTransfer": 0,
           "AssetsCreatedPerSecond": 0,
           "AssetsProcessedCount": 0,
           "TotalAssetsInTransfer": 0,
@@ -1069,7 +1069,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
     "SuccessfulStreamEdits": 0,
     "FailedStreamEdits": 0,
     "PointEdits": 0,
-    "TotalPoints": 0,
+    "TotalPointsInTransfer": 0,
     "AssetsCreatedPerSecond": 0,
     "AssetsProcessedCount": 0,
     "TotalAssetsInTransfer": 0,
@@ -1105,8 +1105,8 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent to be deleted.<br/><br/>
 
@@ -1135,10 +1135,10 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#agentId<br/><br/>
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
+<br/>Agent identifier.<br/><br/>
 
 <h3>Response</h3>
 
@@ -1179,7 +1179,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
           "SuccessfulStreamEdits": 0,
           "FailedStreamEdits": 0,
           "PointEdits": 0,
-          "TotalPoints": 0,
+          "TotalPointsInTransfer": 0,
           "AssetsCreatedPerSecond": 0,
           "AssetsProcessedCount": 0,
           "TotalAssetsInTransfer": 0,
@@ -1267,8 +1267,8 @@ PUT /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>
 
@@ -1302,7 +1302,7 @@ The PiSystem properties to update.<br/>
         "SuccessfulStreamEdits": 0,
         "FailedStreamEdits": 0,
         "PointEdits": 0,
-        "TotalPoints": 0,
+        "TotalPointsInTransfer": 0,
         "AssetsCreatedPerSecond": 0,
         "AssetsProcessedCount": 0,
         "TotalAssetsInTransfer": 0,
@@ -1411,7 +1411,7 @@ The PiSystem properties to update.<br/>
         "SuccessfulStreamEdits": 0,
         "FailedStreamEdits": 0,
         "PointEdits": 0,
-        "TotalPoints": 0,
+        "TotalPointsInTransfer": 0,
         "AssetsCreatedPerSecond": 0,
         "AssetsProcessedCount": 0,
         "TotalAssetsInTransfer": 0,
@@ -1498,10 +1498,10 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#agentId<br/><br/>`string piSystemId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
+<br/>Agent identifier.<br/><br/>`string piSystemId`
 <br/>PI System ID<br/><br/>
 
 <h3>Response</h3>
@@ -1543,7 +1543,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
         "SuccessfulStreamEdits": 0,
         "FailedStreamEdits": 0,
         "PointEdits": 0,
-        "TotalPoints": 0,
+        "TotalPointsInTransfer": 0,
         "AssetsCreatedPerSecond": 0,
         "AssetsProcessedCount": 0,
         "TotalAssetsInTransfer": 0,
@@ -1630,18 +1630,18 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#agentId<br/><br/>
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
+<br/>Agent identifier.<br/><br/>
 
 <h3>Response</h3>
 
 |Status Code|Body Type|Description|
 |---|---|---|
 |200|[AgentStatusDto](#schemaagentstatusdto)|The `AgentStatusDto` of the specified `agentId`.|
-|401|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#401|
-|404|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#404|
+|401|[ErrorResponse](#schemaerrorresponse)|Unauthorized.|
+|404|[ErrorResponse](#schemaerrorresponse)|Client or tenant not found.|
 
 <h4>Example response body</h4>
 
@@ -1713,10 +1713,10 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#agentId<br/><br/>
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
+<br/>Agent identifier.<br/><br/>
 `[optional] any healthEventCategory`
 <br/>Health event category to filter by<br/><br/>`[optional] integer pointId`
 <br/>Point ID to filter by<br/><br/>`[optional] string elementId`
@@ -1728,7 +1728,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 |Status Code|Body Type|Description|
 |---|---|---|
 |200|[HealthEventDto](#schemahealtheventdto)[]|The collection of `HealthEventDto` associated with the specified `agentId`.|
-|401|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#401|
+|401|[ErrorResponse](#schemaerrorresponse)|Unauthorized.|
 
 <h4>Example response body</h4>
 
@@ -1767,10 +1767,10 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSou
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#agentId<br/><br/>
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
+<br/>Agent identifier.<br/><br/>
 
 <h4>Request Body</h4>
 
@@ -1793,10 +1793,10 @@ Health Event to record<br/>
 
 |Status Code|Body Type|Description|
 |---|---|---|
-|201|None|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#201|
-|404|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#404|
+|201|None|Created.|
+|404|[ErrorResponse](#schemaerrorresponse)|Client or tenant not found.|
 |422|[ErrorResponse](#schemaerrorresponse)|Unprocessable Entity; invalid `HealthEventDto` in request body|
-|500|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#500|
+|500|[ErrorResponse](#schemaerrorresponse)|Internal server error.|
 
 ---
 
@@ -1816,10 +1816,10 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#agentId<br/><br/>`string transfer`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
+<br/>Agent identifier.<br/><br/>`string transfer`
 <br/>Optional. If provided, will only delete health events with this Transfer ID.<br/><br/>`any category`
 <br/>Optional. If provided, will only delete health events with this category.<br/><br/>`any eventId`
 <br/>Optional. If provided, will only delete health events with this eventId.<br/><br/>
@@ -1828,8 +1828,8 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 
 |Status Code|Body Type|Description|
 |---|---|---|
-|204|None|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#204|
-|401|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#401|
+|204|None|Deleted.|
+|401|[ErrorResponse](#schemaerrorresponse)|Unauthorized.|
 
 ---
 
@@ -1848,10 +1848,10 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#agentId<br/><br/>`string healthEventId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
+<br/>Agent identifier.<br/><br/>`string healthEventId`
 <br/>Unique identifier for a Health Event<br/><br/>
 
 <h3>Response</h3>
@@ -1859,8 +1859,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 |Status Code|Body Type|Description|
 |---|---|---|
 |200|[HealthEventDto](#schemahealtheventdto)|The `HealthEventDto` specified by `healthEventId`.|
-|401|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#401|
-|404|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#404|
+|401|[ErrorResponse](#schemaerrorresponse)|Unauthorized.|
+|404|[ErrorResponse](#schemaerrorresponse)|Client or tenant not found.|
 
 <h4>Example response body</h4>
 
@@ -1897,18 +1897,18 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#agentId<br/><br/>`string healthEventId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
+<br/>Agent identifier.<br/><br/>`string healthEventId`
 <br/>Unique identifier for a Health Event<br/><br/>
 
 <h3>Response</h3>
 
 |Status Code|Body Type|Description|
 |---|---|---|
-|204|None|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#204|
-|401|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#401|
+|204|None|Deleted.|
+|401|[ErrorResponse](#schemaerrorresponse)|Unauthorized.|
 
 ---
 
@@ -1927,18 +1927,18 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string DataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string DataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
 <br/>The Id of the requested Agent.<br/><br/>
 
 <h3>Response</h3>
 
 |Status Code|Body Type|Description|
 |---|---|---|
-|200|[TransferMetricsDto](#schematransfermetricsdto)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#200|
-|400|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#400|
-|500|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#500|
+|200|[TransferMetricsDto](#schematransfermetricsdto)|Success.|
+|400|[ErrorResponse](#schemaerrorresponse)|Missing or invalid inputs.|
+|500|[ErrorResponse](#schemaerrorresponse)|Internal server error.|
 
 <h4>Example response body</h4>
 
@@ -1953,7 +1953,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
   "SuccessfulStreamEdits": 0,
   "FailedStreamEdits": 0,
   "PointEdits": 0,
-  "TotalPoints": 0,
+  "TotalPointsInTransfer": 0,
   "AssetsCreatedPerSecond": 0,
   "AssetsProcessedCount": 0,
   "TotalAssetsInTransfer": 0,
@@ -1988,9 +1988,9 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
 <br/>The Id of the requested Agent.<br/><br/>`string transferId`
 <br/>The Id of the requested Transfer.<br/><br/>
 
@@ -1998,11 +1998,11 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 
 |Status Code|Body Type|Description|
 |---|---|---|
-|200|[CombinedTransferMetricsDto](#schemacombinedtransfermetricsdto)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#200|
-|400|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#400|
-|401|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#401|
-|403|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#403|
-|500|[ErrorResponse](#schemaerrorresponse)|#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#500|
+|200|[CombinedTransferMetricsDto](#schemacombinedtransfermetricsdto)|Success.|
+|400|[ErrorResponse](#schemaerrorresponse)|Missing or invalid inputs.|
+|401|[ErrorResponse](#schemaerrorresponse)|Unauthorized.|
+|403|[ErrorResponse](#schemaerrorresponse)|Forbidden.|
+|500|[ErrorResponse](#schemaerrorresponse)|Internal server error.|
 
 <h4>Example response body</h4>
 
@@ -2069,10 +2069,10 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#datasourceId<br/><br/>`string agentId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#agentId<br/><br/>
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/>Data source identifier.<br/><br/>`string agentId`
+<br/>Agent identifier.<br/><br/>
 
 <h3>Response</h3>
 
@@ -2189,8 +2189,8 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSou
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>
 
@@ -2329,8 +2329,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the dataSource associated with the resource.<br/><br/>`string agentId`
 <br/>The Id of the Agent the transfer belongs to.<br/><br/>`string transferId`
 <br/>The Id of the Transfer that the Stream Ids belong to.<br/><br/>
@@ -2361,8 +2361,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource associated with the resource.<br/><br/>`string agentId`
 <br/>The Id of the Agent the Query collection belongs to.<br/><br/>
 
@@ -2436,8 +2436,8 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSou
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>
 
@@ -2549,8 +2549,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource associated with the resource.<br/><br/>`string agentId`
 <br/>The Id of the Agent the Query collection belongs to.<br/><br/>`string queryId`
 <br/>The Id of the query.<br/><br/>
@@ -2623,8 +2623,8 @@ PATCH /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSo
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>`string queryId`
 <br/>The Id of the Query to update.<br/><br/>
@@ -2701,8 +2701,8 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>`string queryId`
 <br/>The Id of the Query to be deleted.<br/><br/>
@@ -2732,8 +2732,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource associated with the resource.<br/><br/>`string agentId`
 <br/>The Id of the Agent the PIPointQuery collection belongs to.<br/><br/>
 
@@ -2778,8 +2778,8 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSou
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>
 
@@ -2833,8 +2833,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource associated with the resource.<br/><br/>`string agentId`
 <br/>The Id of the Agent the Query collection belongs to.<br/><br/>`string piPointQueryId`
 <br/>The Id of the query.<br/><br/>
@@ -2878,8 +2878,8 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>`string piPointQueryId`
 <br/>The Id of the PIPointQuery to be deleted.<br/><br/>
@@ -2909,8 +2909,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource associated with the resource.<br/><br/>`string agentId`
 <br/>The Id of the Agent associated with the resource.<br/><br/>`string queryId`
 <br/>The Id of the query.<br/><br/>
@@ -2957,8 +2957,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource associated with the resource.<br/><br/>`string agentId`
 <br/>The Id of the Agent associated with the resource.<br/><br/>`string queryId`
 <br/>The Id of the query.<br/><br/>
@@ -3006,8 +3006,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource associated with the resource.<br/><br/>`string agentId`
 <br/>The Id of the Agent associated with the resource.<br/><br/>`string piPointQueryId`
 <br/>The Id of the PIPointQuery.<br/><br/>
@@ -3056,8 +3056,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource associated with the resource.<br/><br/>`string agentId`
 <br/>The Id of the Agent the Capability collection belongs to.<br/><br/>
 
@@ -3101,8 +3101,8 @@ PUT /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>`string transferId`
 <br/>The Id of the Transfer to be replaced.<br/><br/>
@@ -3243,8 +3243,8 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>`string transferId`
 <br/>The Id of the Transfer to be deleted.<br/><br/>
@@ -3276,8 +3276,8 @@ PUT /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>`string transferId`
 <br/>The Id of the Transfer to be replaced.<br/><br/>
@@ -3406,8 +3406,8 @@ PUT /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>
 
@@ -3441,7 +3441,7 @@ The PiSystem properties to update.<br/>
         "SuccessfulStreamEdits": 0,
         "FailedStreamEdits": 0,
         "PointEdits": 0,
-        "TotalPoints": 0,
+        "TotalPointsInTransfer": 0,
         "AssetsCreatedPerSecond": 0,
         "AssetsProcessedCount": 0,
         "TotalAssetsInTransfer": 0,
@@ -3550,7 +3550,7 @@ The PiSystem properties to update.<br/>
         "SuccessfulStreamEdits": 0,
         "FailedStreamEdits": 0,
         "PointEdits": 0,
-        "TotalPoints": 0,
+        "TotalPointsInTransfer": 0,
         "AssetsCreatedPerSecond": 0,
         "AssetsProcessedCount": 0,
         "TotalAssetsInTransfer": 0,
@@ -3637,8 +3637,8 @@ PUT /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>
 
@@ -3672,7 +3672,7 @@ The PiSystem properties to update.<br/>
         "SuccessfulStreamEdits": 0,
         "FailedStreamEdits": 0,
         "PointEdits": 0,
-        "TotalPoints": 0,
+        "TotalPointsInTransfer": 0,
         "AssetsCreatedPerSecond": 0,
         "AssetsProcessedCount": 0,
         "TotalAssetsInTransfer": 0,
@@ -3780,7 +3780,7 @@ The PiSystem properties to update.<br/>
         "SuccessfulStreamEdits": 0,
         "FailedStreamEdits": 0,
         "PointEdits": 0,
-        "TotalPoints": 0,
+        "TotalPointsInTransfer": 0,
         "AssetsCreatedPerSecond": 0,
         "AssetsProcessedCount": 0,
         "TotalAssetsInTransfer": 0,
@@ -3867,8 +3867,8 @@ PUT /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>`string transferId`
 <br/>The Id of the Transfer to be updated.<br/><br/>
@@ -3997,8 +3997,8 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the requested DataSource.<br/><br/>`string agentId`
 <br/>The Id of the requested Agent.<br/><br/>`string piSystemName`
 <br/>The name of the requested PI System<br/><br/>
@@ -4027,8 +4027,8 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the requested DataSource.<br/><br/>`string agentId`
 <br/>The Id of the requested Agent.<br/><br/>`string piServerId`
 <br/>The id of the requested PI server<br/><br/>
@@ -4057,8 +4057,8 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSou
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>`string queryId`
 <br/>The Id of the Query to be cancelled.<br/><br/>
@@ -4088,8 +4088,8 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSou
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>
 
@@ -4119,8 +4119,8 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSou
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string dataSourceId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string dataSourceId`
 <br/>The Id of the DataSource the resource belongs to.<br/><br/>`string agentId`
 <br/>The Id of the Agent the resource belongs to.<br/><br/>
 
@@ -4195,7 +4195,7 @@ Data Transfer Object for a Data Source.
             "SuccessfulStreamEdits": 0,
             "FailedStreamEdits": 0,
             "PointEdits": 0,
-            "TotalPoints": 0,
+            "TotalPointsInTransfer": 0,
             "AssetsCreatedPerSecond": 0,
             "AssetsProcessedCount": 0,
             "TotalAssetsInTransfer": 0,
@@ -4274,7 +4274,7 @@ Data Transfer Object for a Data Source.
       "SuccessfulStreamEdits": 0,
       "FailedStreamEdits": 0,
       "PointEdits": 0,
-      "TotalPoints": 0,
+      "TotalPointsInTransfer": 0,
       "AssetsCreatedPerSecond": 0,
       "AssetsProcessedCount": 0,
       "TotalAssetsInTransfer": 0,
@@ -4355,7 +4355,7 @@ Data Transfer Object for an Agent.
           "SuccessfulStreamEdits": 0,
           "FailedStreamEdits": 0,
           "PointEdits": 0,
-          "TotalPoints": 0,
+          "TotalPointsInTransfer": 0,
           "AssetsCreatedPerSecond": 0,
           "AssetsProcessedCount": 0,
           "TotalAssetsInTransfer": 0,
@@ -4434,7 +4434,7 @@ Data Transfer Object for an Agent.
     "SuccessfulStreamEdits": 0,
     "FailedStreamEdits": 0,
     "PointEdits": 0,
-    "TotalPoints": 0,
+    "TotalPointsInTransfer": 0,
     "AssetsCreatedPerSecond": 0,
     "AssetsProcessedCount": 0,
     "TotalAssetsInTransfer": 0,
@@ -4534,7 +4534,7 @@ Data Transfer Object for a PI System.
         "SuccessfulStreamEdits": 0,
         "FailedStreamEdits": 0,
         "PointEdits": 0,
-        "TotalPoints": 0,
+        "TotalPointsInTransfer": 0,
         "AssetsCreatedPerSecond": 0,
         "AssetsProcessedCount": 0,
         "TotalAssetsInTransfer": 0,
@@ -4657,7 +4657,7 @@ Data Transfer Object summarizing a Transfer.
     "SuccessfulStreamEdits": 0,
     "FailedStreamEdits": 0,
     "PointEdits": 0,
-    "TotalPoints": 0,
+    "TotalPointsInTransfer": 0,
     "AssetsCreatedPerSecond": 0,
     "AssetsProcessedCount": 0,
     "TotalAssetsInTransfer": 0,
@@ -4790,7 +4790,7 @@ Data Transfer Object for tracking metrics of a Transfer.
 |SuccessfulStreamEdits|int64|false|false|None|
 |FailedStreamEdits|int64|false|false|None|
 |PointEdits|int64|false|false|None|
-|TotalPoints|int64|false|false|None|
+|TotalPointsInTransfer|int64|false|false|None|
 |AssetsCreatedPerSecond|float|false|false|None|
 |AssetsProcessedCount|int64|false|false|None|
 |TotalAssetsInTransfer|int64|false|false|None|
@@ -4813,7 +4813,7 @@ Data Transfer Object for tracking metrics of a Transfer.
   "SuccessfulStreamEdits": 0,
   "FailedStreamEdits": 0,
   "PointEdits": 0,
-  "TotalPoints": 0,
+  "TotalPointsInTransfer": 0,
   "AssetsCreatedPerSecond": 0,
   "AssetsProcessedCount": 0,
   "TotalAssetsInTransfer": 0,
@@ -5226,6 +5226,17 @@ This class holds the highest severity among all health events for some object (c
 |ErrorDeletingCacheFile|400311|
 |UnknownPIPointCompressionType|400312|
 |ErrorRetrievingLastArchiveValue|400313|
+|NoCachedMetadataPolicy|400314|
+|NoMetadataChangesFound|400315|
+|SkipProcessingAFChanges|400316|
+|ResumeProcessingAFChanges|400317|
+|DetectedImplicitPointChanges|400318|
+|RunningAFTransferData|400319|
+|ProcessingTransferJobRecoverStreamsRequest|400320|
+|TransferJobReceivedRecoverStreamsRequest|400321|
+|RecoverStreamsRequestFailed|400322|
+|SocketErrorDuringSendAFIndexProgress|400323|
+|UnexpectedNonFatalErrorInSendAFIndexProgress|400324|
 |RegisteringServiceType|410000|
 |RegisteredServiceType|410001|
 |FailedToRegisterServiceType|410002|
@@ -5400,6 +5411,7 @@ This class holds the highest severity among all health events for some object (c
 |FailedToGetAgentStatus|430092|
 |FailedToCancelQueryForAgent|430093|
 |DeletingTransferCloudObject|430094|
+|DataSourceAclIsMalformed|430095|
 |ErrorWritingDataToEventHub|440000|
 |CreatingStreamsForTransferJob|440001|
 |ErrorCreatingStreamsFromMetadataForTransferJob|440002|
@@ -6296,6 +6308,9 @@ Data Transfer Object for a Transfer.
 |UnsupportedPointType|5|
 |DataFailedToSend|6|
 |DataSendingButPreviouslyFailed|7|
+|NotFoundWhileDataSending|8|
+|RecoveryInProgress|9|
+|RecoverySuccessful|10|
 
 ---
 

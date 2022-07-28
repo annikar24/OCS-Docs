@@ -21,8 +21,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/agents
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>
 
 <h3>Response</h3>
 
@@ -69,7 +69,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/agents
             "SuccessfulStreamEdits": 0,
             "FailedStreamEdits": 0,
             "PointEdits": 0,
-            "TotalPoints": 0,
+            "TotalPointsInTransfer": 0,
             "AssetsCreatedPerSecond": 0,
             "AssetsProcessedCount": 0,
             "TotalAssetsInTransfer": 0,
@@ -148,7 +148,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/agents
       "SuccessfulStreamEdits": 0,
       "FailedStreamEdits": 0,
       "PointEdits": 0,
-      "TotalPoints": 0,
+      "TotalPointsInTransfer": 0,
       "AssetsCreatedPerSecond": 0,
       "AssetsProcessedCount": 0,
       "TotalAssetsInTransfer": 0,
@@ -192,8 +192,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/{agentId}/capabi
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string agentId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string agentId`
 <br/>The Id of the specified on-prem agent.<br/><br/>
 
 <h3>Response</h3>
@@ -227,8 +227,8 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/{agentId}/capab
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string agentId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string agentId`
 <br/>The Id of the specified on-prem agent.<br/><br/>
 
 <h4>Request Body</h4>
@@ -267,8 +267,8 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/{agentId}/logs
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string agentId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string agentId`
 <br/>The Id of the specified on-prem agent.<br/><br/>
 
 <h3>Response</h3>
@@ -303,8 +303,8 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/{agentId}
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#tenantId<br/><br/>`string namespaceId`
-<br/>#https://raw.githubusercontent.com/osisoft/OCS-Docs/main/content/external-references/common.yaml#namespaceId<br/><br/>`string agentId`
+<br/>Tenant identifier.<br/><br/>`string namespaceId`
+<br/>Namespace identifier.<br/><br/>`string agentId`
 <br/>The Id of the specified on-prem agent.<br/><br/>
 
 <h3>Response</h3>
@@ -385,7 +385,7 @@ Data Transfer Object for an Agent.
           "SuccessfulStreamEdits": 0,
           "FailedStreamEdits": 0,
           "PointEdits": 0,
-          "TotalPoints": 0,
+          "TotalPointsInTransfer": 0,
           "AssetsCreatedPerSecond": 0,
           "AssetsProcessedCount": 0,
           "TotalAssetsInTransfer": 0,
@@ -464,7 +464,7 @@ Data Transfer Object for an Agent.
     "SuccessfulStreamEdits": 0,
     "FailedStreamEdits": 0,
     "PointEdits": 0,
-    "TotalPoints": 0,
+    "TotalPointsInTransfer": 0,
     "AssetsCreatedPerSecond": 0,
     "AssetsProcessedCount": 0,
     "TotalAssetsInTransfer": 0,
@@ -564,7 +564,7 @@ Data Transfer Object for a PI System.
         "SuccessfulStreamEdits": 0,
         "FailedStreamEdits": 0,
         "PointEdits": 0,
-        "TotalPoints": 0,
+        "TotalPointsInTransfer": 0,
         "AssetsCreatedPerSecond": 0,
         "AssetsProcessedCount": 0,
         "TotalAssetsInTransfer": 0,
@@ -687,7 +687,7 @@ Data Transfer Object summarizing a Transfer.
     "SuccessfulStreamEdits": 0,
     "FailedStreamEdits": 0,
     "PointEdits": 0,
-    "TotalPoints": 0,
+    "TotalPointsInTransfer": 0,
     "AssetsCreatedPerSecond": 0,
     "AssetsProcessedCount": 0,
     "TotalAssetsInTransfer": 0,
@@ -820,7 +820,7 @@ Data Transfer Object for tracking metrics of a Transfer.
 |SuccessfulStreamEdits|int64|false|false|None|
 |FailedStreamEdits|int64|false|false|None|
 |PointEdits|int64|false|false|None|
-|TotalPoints|int64|false|false|None|
+|TotalPointsInTransfer|int64|false|false|None|
 |AssetsCreatedPerSecond|float|false|false|None|
 |AssetsProcessedCount|int64|false|false|None|
 |TotalAssetsInTransfer|int64|false|false|None|
@@ -843,7 +843,7 @@ Data Transfer Object for tracking metrics of a Transfer.
   "SuccessfulStreamEdits": 0,
   "FailedStreamEdits": 0,
   "PointEdits": 0,
-  "TotalPoints": 0,
+  "TotalPointsInTransfer": 0,
   "AssetsCreatedPerSecond": 0,
   "AssetsProcessedCount": 0,
   "TotalAssetsInTransfer": 0,
@@ -1256,6 +1256,17 @@ This class holds the highest severity among all health events for some object (c
 |ErrorDeletingCacheFile|400311|
 |UnknownPIPointCompressionType|400312|
 |ErrorRetrievingLastArchiveValue|400313|
+|NoCachedMetadataPolicy|400314|
+|NoMetadataChangesFound|400315|
+|SkipProcessingAFChanges|400316|
+|ResumeProcessingAFChanges|400317|
+|DetectedImplicitPointChanges|400318|
+|RunningAFTransferData|400319|
+|ProcessingTransferJobRecoverStreamsRequest|400320|
+|TransferJobReceivedRecoverStreamsRequest|400321|
+|RecoverStreamsRequestFailed|400322|
+|SocketErrorDuringSendAFIndexProgress|400323|
+|UnexpectedNonFatalErrorInSendAFIndexProgress|400324|
 |RegisteringServiceType|410000|
 |RegisteredServiceType|410001|
 |FailedToRegisterServiceType|410002|
@@ -1430,6 +1441,7 @@ This class holds the highest severity among all health events for some object (c
 |FailedToGetAgentStatus|430092|
 |FailedToCancelQueryForAgent|430093|
 |DeletingTransferCloudObject|430094|
+|DataSourceAclIsMalformed|430095|
 |ErrorWritingDataToEventHub|440000|
 |CreatingStreamsForTransferJob|440001|
 |ErrorCreatingStreamsFromMetadataForTransferJob|440002|
