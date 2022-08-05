@@ -168,6 +168,13 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/agents
 ]
 ```
 
+<h3>Authorization</h3>
+
+Allowed for these roles: 
+<ul>
+<li>Tenant Member</li>
+</ul>
+
 ---
 
 ## `Get Capability Updates`
@@ -195,6 +202,13 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/{agentId}/capabi
 |---|---|---|
 |200|Inline|A Dictionary object.|
 |500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error|
+
+<h3>Authorization</h3>
+
+Allowed for these roles: 
+<ul>
+<li>Tenant Member</li>
+</ul>
 
 ---
 
@@ -229,6 +243,13 @@ List of capabilities being published.<br/>
 |401|[ErrorResponse](#schemaerrorresponse)|Unauthorized|
 |500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error|
 
+<h3>Authorization</h3>
+
+Allowed for these roles: 
+<ul>
+<li>Tenant Member</li>
+</ul>
+
 ---
 
 ## `Post Forwarded Logs`
@@ -257,6 +278,13 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/{agentId}/logs
 |204|None|Log messages from the specified on-prem `agentId` have been forwarded to Application Insights.|
 |401|[ErrorResponse](#schemaerrorresponse)|Unauthorized|
 |500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error|
+
+<h3>Authorization</h3>
+
+Allowed for these roles: 
+<ul>
+<li>Tenant Member</li>
+</ul>
 
 ---
 
@@ -288,6 +316,13 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/sync/{agentId}
 |204|None|Sync route for specified `agentId` has been posted - No Content.|
 |401|[ErrorResponse](#schemaerrorresponse)|Unauthorized|
 |500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error|
+
+<h3>Authorization</h3>
+
+Allowed for these roles: 
+<ul>
+<li>Tenant Member</li>
+</ul>
 
 ---
 ## Definitions

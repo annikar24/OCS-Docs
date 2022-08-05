@@ -916,6 +916,13 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/DataPriva
 ]
 ```
 
+<h3>Authorization</h3>
+
+Allowed for these roles: 
+<ul>
+<li>Tenant Administrator</li>
+</ul>
+
 ---
 
 ## `Get Agent`
