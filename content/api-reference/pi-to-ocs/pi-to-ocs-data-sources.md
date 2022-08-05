@@ -916,13 +916,6 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/DataPriva
 ]
 ```
 
-<h3>Authorization</h3>
-
-Allowed for these roles: 
-<ul>
-<li>Tenant Administrator</li>
-</ul>
-
 ---
 
 ## `Get Agent`
@@ -5232,11 +5225,6 @@ This class holds the highest severity among all health events for some object (c
 |ResumeProcessingAFChanges|400317|
 |DetectedImplicitPointChanges|400318|
 |RunningAFTransferData|400319|
-|ProcessingTransferJobRecoverStreamsRequest|400320|
-|TransferJobReceivedRecoverStreamsRequest|400321|
-|RecoverStreamsRequestFailed|400322|
-|SocketErrorDuringSendAFIndexProgress|400323|
-|UnexpectedNonFatalErrorInSendAFIndexProgress|400324|
 |RegisteringServiceType|410000|
 |RegisteredServiceType|410001|
 |FailedToRegisterServiceType|410002|
@@ -5411,7 +5399,6 @@ This class holds the highest severity among all health events for some object (c
 |FailedToGetAgentStatus|430092|
 |FailedToCancelQueryForAgent|430093|
 |DeletingTransferCloudObject|430094|
-|DataSourceAclIsMalformed|430095|
 |ErrorWritingDataToEventHub|440000|
 |CreatingStreamsForTransferJob|440001|
 |ErrorCreatingStreamsFromMetadataForTransferJob|440002|
@@ -6308,9 +6295,6 @@ Data Transfer Object for a Transfer.
 |UnsupportedPointType|5|
 |DataFailedToSend|6|
 |DataSendingButPreviouslyFailed|7|
-|NotFoundWhileDataSending|8|
-|RecoveryInProgress|9|
-|RecoverySuccessful|10|
 
 ---
 
