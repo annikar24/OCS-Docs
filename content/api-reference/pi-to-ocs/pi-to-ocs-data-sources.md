@@ -356,34 +356,6 @@ The DataSourceCreateUpdateDto to use when creating the DataSource.<br/>
 
 ---
 
-## `Delete Data Sources`
-
-<a id="opIdDataSources_Delete Data Sources"></a>
-
-Delete all DataSources.
-
-<h3>Request</h3>
-
-```text 
-DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources
-```
-
-<h4>Parameters</h4>
-
-`string tenantId`
-<br/>Tenant identifier.<br/><br/>`string namespaceId`
-<br/>Namespace identifier.<br/><br/>
-
-<h3>Response</h3>
-
-|Status Code|Body Type|Description|
-|---|---|---|
-|204|None|The DataSources were deleted.|
-|401|[ErrorResponse](#schemaerrorresponse)|Unauthorized|
-|500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error|
-
----
-
 ## `Get Data Source`
 
 <a id="opIdDataSources_Get Data Source"></a>
@@ -5260,15 +5232,6 @@ This class holds the highest severity among all health events for some object (c
 |ResumeProcessingAFChanges|400317|
 |DetectedImplicitPointChanges|400318|
 |RunningAFTransferData|400319|
-|ProcessingTransferJobRecoverStreamsRequest|400320|
-|TransferJobReceivedRecoverStreamsRequest|400321|
-|RecoverStreamsRequestFailed|400322|
-|SocketErrorDuringSendAFIndexProgress|400323|
-|UnexpectedNonFatalErrorInSendAFIndexProgress|400324|
-|FailedToUpdateDigitalTable|400325|
-|ErrorQueryingDigitalTable|400326|
-|InvalidDigitalTableStateSet|400327|
-|ProcessingTransferCancelOperation|400328|
 |RegisteringServiceType|410000|
 |RegisteredServiceType|410001|
 |FailedToRegisterServiceType|410002|
@@ -5443,9 +5406,6 @@ This class holds the highest severity among all health events for some object (c
 |FailedToGetAgentStatus|430092|
 |FailedToCancelQueryForAgent|430093|
 |DeletingTransferCloudObject|430094|
-|DataSourceAclIsMalformed|430095|
-|FailedToGetMissingAgentResources|430096|
-|FailedToCreateMissingAgentResources|430097|
 |ErrorWritingDataToEventHub|440000|
 |CreatingStreamsForTransferJob|440001|
 |ErrorCreatingStreamsFromMetadataForTransferJob|440002|
@@ -5539,8 +5499,6 @@ This class holds the highest severity among all health events for some object (c
 |ConfigurationServiceFailedToDeleteStreamType|440090|
 |ConfigurationServiceFailedToFindStreamType|440091|
 |ConfigurationServiceFailedToUpdateStreamTypeACL|440092|
-|FailedToAddNewHealthEventFromStreamsService|440093|
-|FailedToDeleteHealthEventFromStreamsService|440094|
 |ResponseInProgressSkipWebExceptionMiddleware|450000|
 |ExceptionHandledByWebExceptionMiddleware|450001|
 |WebExceptionMiddlewareReceivedException|450002|
@@ -5615,7 +5573,6 @@ This class holds the highest severity among all health events for some object (c
 |AssetBulkUpdateRequest|450071|
 |AssetUpdateRequestReponseStatus|450072|
 |AssetDeleteTransferSpeedMetric|450073|
-|ExceptionCreatingAgentResources|450074|
 |RetrievedSqlServer|460001|
 |DatabaseAlreadyExists|460002|
 |ErrorCreatingDatabase|460003|
@@ -6085,7 +6042,6 @@ Data Transfer Object for a Health Event.
 |Stream|3|
 |HistoricalTransfer|4|
 |PIPointIndexing|5|
-|AssetType|6|
 
 ---
 
@@ -6346,9 +6302,6 @@ Data Transfer Object for a Transfer.
 |UnsupportedPointType|5|
 |DataFailedToSend|6|
 |DataSendingButPreviouslyFailed|7|
-|NotFoundWhileDataSending|8|
-|RecoveryInProgress|9|
-|RecoverySuccessful|10|
 
 ---
 
