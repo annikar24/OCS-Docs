@@ -1546,6 +1546,18 @@ This class holds the highest severity among all health events for some object (c
 |ErrorQueryingDigitalTable|400326|
 |InvalidDigitalTableStateSet|400327|
 |ProcessingTransferCancelOperation|400328|
+|FastHeartbeatStarted|400329|
+|SlowHeartbeatStarted|400330|
+|StreamingArchiveRequestDiscarded|400331|
+|UnableToQueueStreamingArchiveBackgroundRequest|400332|
+|ErrorProcessingStreamingArchiveRequest|400333|
+|SendingPointsFromAF|400334|
+|UpdatedPointIdNotFoundInTransfer|400335|
+|FailedToSerializeHistoricalProgressDummyMessage|400336|
+|FailedToRecordHistoricalProgressDummyPoint|400337|
+|FailedToRecordHistoricalProgress|400338|
+|SettingTaskSendCount|400339|
+|InvalidCharactersInAlternateDisplayName|400340|
 |RegisteringServiceType|410000|
 |RegisteredServiceType|410001|
 |FailedToRegisterServiceType|410002|
@@ -1625,6 +1637,7 @@ This class holds the highest severity among all health events for some object (c
 |StartingElasticPoolWorker|420071|
 |StoppingElasticPoolWorker|420072|
 |BeganRunningCreateOrUpdateDatabaseWithRetryAsync|420073|
+|OperationInvalid|420074|
 |DataSourceOwnerIsMissing|430000|
 |DataSourceOwnerIsMalformed|430001|
 |RequestContentLengthMismatch|430002|
@@ -1701,7 +1714,7 @@ This class holds the highest severity among all health events for some object (c
 |AgentRegisteredWithCapabilities|430073|
 |FailedToPublishCapabilitiesDuringRegistration|430074|
 |NoCapabilitiesReturnedFromRegistration|430075|
-|ErrorUpdatingAgentTransferAssetCreationCounts|430076|
+|ErrorUpdatingAssetErrors|430076|
 |ErrorDeletingClient|430077|
 |FailedToReadDataFromOCS|430078|
 |ReadingFromOcs|430079|
@@ -1723,6 +1736,16 @@ This class holds the highest severity among all health events for some object (c
 |DataSourceAclIsMalformed|430095|
 |FailedToGetMissingAgentResources|430096|
 |FailedToCreateMissingAgentResources|430097|
+|CleaningOrphanedSqlRecords|430098|
+|ErrorLoadingCleanOrphanedRecordsScript|430099|
+|ErrorCleaningOrphanedSqlRecords|430100|
+|FailedToCreateVerboseLoggingConfiguration|430101|
+|FailedToRemoveVerboseLoggingConfiguration|430102|
+|FailedToUpdateStreamUom|430104|
+|ErrorReadingSqlCommandFromFileAsync|430105|
+|CreatingDatabaseEditorUserIfNeeded|430106|
+|ErrorCreatingDatabaseEditorLoginIfNeeded|430107|
+|ErrorCreatingDatabaseEditorUserIfNeeded|430108|
 |ErrorWritingDataToEventHub|440000|
 |CreatingStreamsForTransferJob|440001|
 |ErrorCreatingStreamsFromMetadataForTransferJob|440002|
@@ -1818,6 +1841,11 @@ This class holds the highest severity among all health events for some object (c
 |ConfigurationServiceFailedToUpdateStreamTypeACL|440092|
 |FailedToAddNewHealthEventFromStreamsService|440093|
 |FailedToDeleteHealthEventFromStreamsService|440094|
+|FailedToRemoveWindowValuesInSds|440095|
+|FailedToRemoveIndexValuesInSds|440096|
+|FailedToTranslateAdditionalDataObjectToAnExpectedType|440097|
+|FailedToTranslateSdsObjectToPIQualities|440098|
+|FailedToRegisterEventHubProcessor|440099|
 |ResponseInProgressSkipWebExceptionMiddleware|450000|
 |ExceptionHandledByWebExceptionMiddleware|450001|
 |WebExceptionMiddlewareReceivedException|450002|
@@ -1893,6 +1921,8 @@ This class holds the highest severity among all health events for some object (c
 |AssetUpdateRequestReponseStatus|450072|
 |AssetDeleteTransferSpeedMetric|450073|
 |ExceptionCreatingAgentResources|450074|
+|UnexpectedErrorDeletingEventHubNamespace|450075|
+|ErrorVerifyingServiceDeletion|450076|
 |RetrievedSqlServer|460001|
 |DatabaseAlreadyExists|460002|
 |ErrorCreatingDatabase|460003|
@@ -1934,6 +1964,10 @@ This class holds the highest severity among all health events for some object (c
 |ErrorGettingRolesForTrustee|460039|
 |RetryHandlerChildErrorsInMultiStatusResponse|460040|
 |FailedToDeserializeMultiStatusContent|460041|
+|FailedtoDeleteValuesFromSdsStream|460042|
+|ElementTrace|460043|
+|OutOfSyncSQLRecords|460044|
+|FailedToAddAgentToUpdateDictionary|4300103|
 
 ---
 

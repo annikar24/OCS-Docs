@@ -968,8 +968,8 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 <h4>Parameters</h4>
 
 `string tenantId`
-<br/>Tenant identifier.<br/><br/>`string namespaceId`
-<br/>Namespace identifier.<br/><br/>`string dataSourceId`
+<br/><br/>`string namespaceId`
+<br/><br/>`string dataSourceId`
 <br/>The Id of the requested DataSource.<br/><br/>`string agentId`
 <br/>The Id of the requested Agent.<br/><br/>
 
@@ -1757,6 +1757,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 |---|---|---|
 |200|[HealthEventDto](#schemahealtheventdto)[]|The collection of `HealthEventDto` associated with the specified `agentId`.|
 |401|[ErrorResponse](#schemaerrorresponse)|Unauthorized.|
+|403|[ErrorResponse](#schemaerrorresponse)|Forbidden.|
 
 <h4>Example response body</h4>
 
@@ -1822,6 +1823,7 @@ Health Event to record<br/>
 |Status Code|Body Type|Description|
 |---|---|---|
 |201|None|Created.|
+|403|[ErrorResponse](#schemaerrorresponse)|Forbidden.|
 |404|[ErrorResponse](#schemaerrorresponse)|Client or tenant not found.|
 |422|[ErrorResponse](#schemaerrorresponse)|Unprocessable Entity; invalid `HealthEventDto` in request body|
 |500|[ErrorResponse](#schemaerrorresponse)|Internal server error.|
@@ -1838,7 +1840,7 @@ Removes all health events associated with an agent
 
 ```text 
 DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSourceId}/agents/{agentId}/status/events
-?transfer={transfer}&category={category}&eventId={eventId}
+?transfer={transfer}&category={category}&eventId={eventId}&pointId={pointId}
 ```
 
 <h4>Parameters</h4>
@@ -1850,7 +1852,8 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 <br/>Agent identifier.<br/><br/>`string transfer`
 <br/>Optional. If provided, will only delete health events with this Transfer ID.<br/><br/>`any category`
 <br/>Optional. If provided, will only delete health events with this category.<br/><br/>`any eventId`
-<br/>Optional. If provided, will only delete health events with this eventId.<br/><br/>
+<br/>Optional. If provided, will only delete health events with this eventId.<br/><br/>`integer pointId`
+<br/>Will only delete health events with this pointId.<br/><br/>
 
 <h3>Response</h3>
 
@@ -1858,6 +1861,7 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 |---|---|---|
 |204|None|Deleted.|
 |401|[ErrorResponse](#schemaerrorresponse)|Unauthorized.|
+|403|[ErrorResponse](#schemaerrorresponse)|Forbidden.|
 
 ---
 
@@ -1888,6 +1892,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 |---|---|---|
 |200|[HealthEventDto](#schemahealtheventdto)|The `HealthEventDto` specified by `healthEventId`.|
 |401|[ErrorResponse](#schemaerrorresponse)|Unauthorized.|
+|403|[ErrorResponse](#schemaerrorresponse)|Forbidden.|
 |404|[ErrorResponse](#schemaerrorresponse)|Client or tenant not found.|
 
 <h4>Example response body</h4>
@@ -1937,14 +1942,15 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataS
 |---|---|---|
 |204|None|Deleted.|
 |401|[ErrorResponse](#schemaerrorresponse)|Unauthorized.|
+|403|[ErrorResponse](#schemaerrorresponse)|Forbidden.|
 
 ---
 
-## `Get Transfer Metrics`
+## `Get Agent Scoped Transfer Metrics`
 
-<a id="opIdDataSources_Get Transfer Metrics"></a>
+<a id="opIdDataSources_Get Agent Scoped Transfer Metrics"></a>
 
-Get Transfer Metrics from the Management Service NOTE: DO NOT REMOVE THIS ROUTE. ALTHOUGH IT IS NO LONGER REFERENCED, AGENT VERSIONS 2.0.X.X AND OLDER STILL REFERENCE IT. ONCE ALL AGENTS BELOW 2.1 ARE DEPRECATED, AND CUSTOMERS ARE CONVERTED, THIS ROUTE CAN BE REMOVED.
+Get Agent-Scoped Transfer Metrics (TransferMetricsDto) NOTE: DO NOT REMOVE THIS ROUTE. ALTHOUGH IT IS NO LONGER REFERENCED, AGENT VERSIONS 2.0.X.X AND OLDER STILL REFERENCE IT. ONCE ALL AGENTS BELOW 2.1 ARE DEPRECATED, AND CUSTOMERS ARE CONVERTED, THIS ROUTE CAN BE REMOVED.
 
 <h3>Request</h3>
 
@@ -2126,9 +2132,6 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
     "LatestStreamingRead": "2019-08-24T14:15:22Z",
     "HistoricalDataEndTime": "2019-08-24T14:15:22Z",
     "TransferredElementsCount": 0,
-    "AssetsCreatedCount": 0,
-    "AssetsUpdatedCount": 0,
-    "AssetsFailedCount": 0,
     "OnPremTransferStatus": 0,
     "DesiredStatus": 0,
     "PIPointIds": [
@@ -2165,7 +2168,6 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
     "TransferRevisionNumber": 0,
     "LastEditDate": "2019-08-24T14:15:22Z",
     "LastEditBy": "string",
-    "PointEdits": 0,
     "AutoDeleteCloudObjects": true,
     "TotalPointsInTransfer": 0,
     "StreamCreationStatus": {
@@ -2195,6 +2197,17 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
       "CurrentArchive": 0,
       "TotalPointsInArchive": 0,
       "TransferredPointsForArchive": 0
+    },
+    "VerboseLoggingConfiguration": {
+      "TransferId": "string",
+      "Enabled": true,
+      "ExpirationDate": "2019-08-24T14:15:22Z",
+      "PIPointIdArray": [
+        0
+      ],
+      "AFElementIdArray": [
+        "string"
+      ]
     }
   }
 ]
@@ -2239,7 +2252,18 @@ Properties of the Transfer to create.<br/>
   "Name": "string",
   "MetadataPrivacy": 0,
   "TotalPointsInTransfer": 0,
-  "AutoDeleteCloudObjects": true
+  "AutoDeleteCloudObjects": true,
+  "VerboseLoggingConfiguration": {
+    "TransferId": "string",
+    "Enabled": true,
+    "ExpirationDate": "2019-08-24T14:15:22Z",
+    "PIPointIdArray": [
+      0
+    ],
+    "AFElementIdArray": [
+      "string"
+    ]
+  }
 }
 ```
 
@@ -2267,9 +2291,6 @@ Properties of the Transfer to create.<br/>
   "LatestStreamingRead": "2019-08-24T14:15:22Z",
   "HistoricalDataEndTime": "2019-08-24T14:15:22Z",
   "TransferredElementsCount": 0,
-  "AssetsCreatedCount": 0,
-  "AssetsUpdatedCount": 0,
-  "AssetsFailedCount": 0,
   "OnPremTransferStatus": 0,
   "DesiredStatus": 0,
   "PIPointIds": [
@@ -2306,7 +2327,6 @@ Properties of the Transfer to create.<br/>
   "TransferRevisionNumber": 0,
   "LastEditDate": "2019-08-24T14:15:22Z",
   "LastEditBy": "string",
-  "PointEdits": 0,
   "AutoDeleteCloudObjects": true,
   "TotalPointsInTransfer": 0,
   "StreamCreationStatus": {
@@ -2336,6 +2356,17 @@ Properties of the Transfer to create.<br/>
     "CurrentArchive": 0,
     "TotalPointsInArchive": 0,
     "TransferredPointsForArchive": 0
+  },
+  "VerboseLoggingConfiguration": {
+    "TransferId": "string",
+    "Enabled": true,
+    "ExpirationDate": "2019-08-24T14:15:22Z",
+    "PIPointIdArray": [
+      0
+    ],
+    "AFElementIdArray": [
+      "string"
+    ]
   }
 }
 ```
@@ -3152,7 +3183,19 @@ The Transfer properties to update.<br/>
   ],
   "HistoricalDataStartTime": "2019-08-24T14:15:22Z",
   "ExpectedTransferRevisionNumber": 0,
-  "AutoDeleteCloudObjects": true
+  "AutoDeleteCloudObjects": true,
+  "VerboseLoggingConfiguration": {
+    "TransferId": "string",
+    "Enabled": true,
+    "ExpirationDate": "2019-08-24T14:15:22Z",
+    "PIPointIdArray": [
+      0
+    ],
+    "AFElementIdArray": [
+      "string"
+    ]
+  },
+  "TotalPointsInTransfer": 0
 }
 ```
 
@@ -3180,9 +3223,6 @@ The Transfer properties to update.<br/>
   "LatestStreamingRead": "2019-08-24T14:15:22Z",
   "HistoricalDataEndTime": "2019-08-24T14:15:22Z",
   "TransferredElementsCount": 0,
-  "AssetsCreatedCount": 0,
-  "AssetsUpdatedCount": 0,
-  "AssetsFailedCount": 0,
   "OnPremTransferStatus": 0,
   "DesiredStatus": 0,
   "PIPointIds": [
@@ -3219,7 +3259,6 @@ The Transfer properties to update.<br/>
   "TransferRevisionNumber": 0,
   "LastEditDate": "2019-08-24T14:15:22Z",
   "LastEditBy": "string",
-  "PointEdits": 0,
   "AutoDeleteCloudObjects": true,
   "TotalPointsInTransfer": 0,
   "StreamCreationStatus": {
@@ -3249,6 +3288,17 @@ The Transfer properties to update.<br/>
     "CurrentArchive": 0,
     "TotalPointsInArchive": 0,
     "TransferredPointsForArchive": 0
+  },
+  "VerboseLoggingConfiguration": {
+    "TransferId": "string",
+    "Enabled": true,
+    "ExpirationDate": "2019-08-24T14:15:22Z",
+    "PIPointIdArray": [
+      0
+    ],
+    "AFElementIdArray": [
+      "string"
+    ]
   }
 }
 ```
@@ -3344,9 +3394,6 @@ The Transfer status to be changed to.<br/>
   "LatestStreamingRead": "2019-08-24T14:15:22Z",
   "HistoricalDataEndTime": "2019-08-24T14:15:22Z",
   "TransferredElementsCount": 0,
-  "AssetsCreatedCount": 0,
-  "AssetsUpdatedCount": 0,
-  "AssetsFailedCount": 0,
   "OnPremTransferStatus": 0,
   "DesiredStatus": 0,
   "PIPointIds": [
@@ -3383,7 +3430,6 @@ The Transfer status to be changed to.<br/>
   "TransferRevisionNumber": 0,
   "LastEditDate": "2019-08-24T14:15:22Z",
   "LastEditBy": "string",
-  "PointEdits": 0,
   "AutoDeleteCloudObjects": true,
   "TotalPointsInTransfer": 0,
   "StreamCreationStatus": {
@@ -3413,6 +3459,17 @@ The Transfer status to be changed to.<br/>
     "CurrentArchive": 0,
     "TotalPointsInArchive": 0,
     "TransferredPointsForArchive": 0
+  },
+  "VerboseLoggingConfiguration": {
+    "TransferId": "string",
+    "Enabled": true,
+    "ExpirationDate": "2019-08-24T14:15:22Z",
+    "PIPointIdArray": [
+      0
+    ],
+    "AFElementIdArray": [
+      "string"
+    ]
   }
 }
 ```
@@ -3935,9 +3992,6 @@ The updated set of points referenced by AF.<br/>
   "LatestStreamingRead": "2019-08-24T14:15:22Z",
   "HistoricalDataEndTime": "2019-08-24T14:15:22Z",
   "TransferredElementsCount": 0,
-  "AssetsCreatedCount": 0,
-  "AssetsUpdatedCount": 0,
-  "AssetsFailedCount": 0,
   "OnPremTransferStatus": 0,
   "DesiredStatus": 0,
   "PIPointIds": [
@@ -3974,7 +4028,6 @@ The updated set of points referenced by AF.<br/>
   "TransferRevisionNumber": 0,
   "LastEditDate": "2019-08-24T14:15:22Z",
   "LastEditBy": "string",
-  "PointEdits": 0,
   "AutoDeleteCloudObjects": true,
   "TotalPointsInTransfer": 0,
   "StreamCreationStatus": {
@@ -4004,6 +4057,17 @@ The updated set of points referenced by AF.<br/>
     "CurrentArchive": 0,
     "TotalPointsInArchive": 0,
     "TransferredPointsForArchive": 0
+  },
+  "VerboseLoggingConfiguration": {
+    "TransferId": "string",
+    "Enabled": true,
+    "ExpirationDate": "2019-08-24T14:15:22Z",
+    "PIPointIdArray": [
+      0
+    ],
+    "AFElementIdArray": [
+      "string"
+    ]
   }
 }
 ```
@@ -4159,6 +4223,34 @@ POST /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSou
 |204|None|Success: The PI reindexing was successful.|
 |401|[ErrorResponse](#schemaerrorresponse)|Unauthorized|
 |409|[ErrorResponse](#schemaerrorresponse)|Conflict|
+|500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error|
+
+---
+
+## `Clean Orphaned Sql Records`
+
+<a id="opIdDataSources_Clean Orphaned Sql Records"></a>
+
+Cleans up the orphaned SQL records after a functional test
+
+<h3>Request</h3>
+
+```text 
+DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/orphanedSqlRecords
+```
+
+<h4>Parameters</h4>
+
+`string tenantId`
+<br/>The ID of the tenant to clean up<br/><br/>`string namespaceId`
+<br/>The ID of the namespace to clean up<br/><br/>
+
+<h3>Response</h3>
+
+|Status Code|Body Type|Description|
+|---|---|---|
+|204|None|Success: The SQL database was cleaned.|
+|401|[ErrorResponse](#schemaerrorresponse)|Unauthorized|
 |500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error|
 
 ---
@@ -5269,6 +5361,18 @@ This class holds the highest severity among all health events for some object (c
 |ErrorQueryingDigitalTable|400326|
 |InvalidDigitalTableStateSet|400327|
 |ProcessingTransferCancelOperation|400328|
+|FastHeartbeatStarted|400329|
+|SlowHeartbeatStarted|400330|
+|StreamingArchiveRequestDiscarded|400331|
+|UnableToQueueStreamingArchiveBackgroundRequest|400332|
+|ErrorProcessingStreamingArchiveRequest|400333|
+|SendingPointsFromAF|400334|
+|UpdatedPointIdNotFoundInTransfer|400335|
+|FailedToSerializeHistoricalProgressDummyMessage|400336|
+|FailedToRecordHistoricalProgressDummyPoint|400337|
+|FailedToRecordHistoricalProgress|400338|
+|SettingTaskSendCount|400339|
+|InvalidCharactersInAlternateDisplayName|400340|
 |RegisteringServiceType|410000|
 |RegisteredServiceType|410001|
 |FailedToRegisterServiceType|410002|
@@ -5348,6 +5452,7 @@ This class holds the highest severity among all health events for some object (c
 |StartingElasticPoolWorker|420071|
 |StoppingElasticPoolWorker|420072|
 |BeganRunningCreateOrUpdateDatabaseWithRetryAsync|420073|
+|OperationInvalid|420074|
 |DataSourceOwnerIsMissing|430000|
 |DataSourceOwnerIsMalformed|430001|
 |RequestContentLengthMismatch|430002|
@@ -5424,7 +5529,7 @@ This class holds the highest severity among all health events for some object (c
 |AgentRegisteredWithCapabilities|430073|
 |FailedToPublishCapabilitiesDuringRegistration|430074|
 |NoCapabilitiesReturnedFromRegistration|430075|
-|ErrorUpdatingAgentTransferAssetCreationCounts|430076|
+|ErrorUpdatingAssetErrors|430076|
 |ErrorDeletingClient|430077|
 |FailedToReadDataFromOCS|430078|
 |ReadingFromOcs|430079|
@@ -5446,6 +5551,16 @@ This class holds the highest severity among all health events for some object (c
 |DataSourceAclIsMalformed|430095|
 |FailedToGetMissingAgentResources|430096|
 |FailedToCreateMissingAgentResources|430097|
+|CleaningOrphanedSqlRecords|430098|
+|ErrorLoadingCleanOrphanedRecordsScript|430099|
+|ErrorCleaningOrphanedSqlRecords|430100|
+|FailedToCreateVerboseLoggingConfiguration|430101|
+|FailedToRemoveVerboseLoggingConfiguration|430102|
+|FailedToUpdateStreamUom|430104|
+|ErrorReadingSqlCommandFromFileAsync|430105|
+|CreatingDatabaseEditorUserIfNeeded|430106|
+|ErrorCreatingDatabaseEditorLoginIfNeeded|430107|
+|ErrorCreatingDatabaseEditorUserIfNeeded|430108|
 |ErrorWritingDataToEventHub|440000|
 |CreatingStreamsForTransferJob|440001|
 |ErrorCreatingStreamsFromMetadataForTransferJob|440002|
@@ -5541,6 +5656,11 @@ This class holds the highest severity among all health events for some object (c
 |ConfigurationServiceFailedToUpdateStreamTypeACL|440092|
 |FailedToAddNewHealthEventFromStreamsService|440093|
 |FailedToDeleteHealthEventFromStreamsService|440094|
+|FailedToRemoveWindowValuesInSds|440095|
+|FailedToRemoveIndexValuesInSds|440096|
+|FailedToTranslateAdditionalDataObjectToAnExpectedType|440097|
+|FailedToTranslateSdsObjectToPIQualities|440098|
+|FailedToRegisterEventHubProcessor|440099|
 |ResponseInProgressSkipWebExceptionMiddleware|450000|
 |ExceptionHandledByWebExceptionMiddleware|450001|
 |WebExceptionMiddlewareReceivedException|450002|
@@ -5616,6 +5736,8 @@ This class holds the highest severity among all health events for some object (c
 |AssetUpdateRequestReponseStatus|450072|
 |AssetDeleteTransferSpeedMetric|450073|
 |ExceptionCreatingAgentResources|450074|
+|UnexpectedErrorDeletingEventHubNamespace|450075|
+|ErrorVerifyingServiceDeletion|450076|
 |RetrievedSqlServer|460001|
 |DatabaseAlreadyExists|460002|
 |ErrorCreatingDatabase|460003|
@@ -5657,6 +5779,10 @@ This class holds the highest severity among all health events for some object (c
 |ErrorGettingRolesForTrustee|460039|
 |RetryHandlerChildErrorsInMultiStatusResponse|460040|
 |FailedToDeserializeMultiStatusContent|460041|
+|FailedtoDeleteValuesFromSdsStream|460042|
+|ElementTrace|460043|
+|OutOfSyncSQLRecords|460044|
+|FailedToAddAgentToUpdateDictionary|4300103|
 
 ---
 
@@ -6193,9 +6319,6 @@ Data Transfer Object for a Transfer.
 |LatestStreamingRead|date-time|false|false|None|
 |HistoricalDataEndTime|date-time|false|false|None|
 |TransferredElementsCount|int32|false|false|None|
-|AssetsCreatedCount|int32|false|false|None|
-|AssetsUpdatedCount|int32|false|false|None|
-|AssetsFailedCount|int32|false|false|None|
 |OnPremTransferStatus|[TransferJobStatus](#schematransferjobstatus)|false|false|None|
 |DesiredStatus|[TransferStatus](#schematransferstatus)|false|false|None|
 |PIPointIds|[integer]|false|true|None|
@@ -6208,13 +6331,13 @@ Data Transfer Object for a Transfer.
 |TransferRevisionNumber|int32|false|false|None|
 |LastEditDate|date-time|false|false|None|
 |LastEditBy|guid|false|false|None|
-|PointEdits|int64|false|false|None|
 |AutoDeleteCloudObjects|boolean|false|false|None|
 |TotalPointsInTransfer|int64|false|false|None|
 |StreamCreationStatus|[DetailedStreamCreationStatus](#schemadetailedstreamcreationstatus)|false|true|None|
 |StreamErrors|[[StreamError](#schemastreamerror)]|false|true|None|
 |AssetErrors|[[AssetError](#schemaasseterror)]|false|true|None|
 |HistTransferProgress|[HistoricalTransferProgress](#schemahistoricaltransferprogress)|false|true|None|
+|VerboseLoggingConfiguration|[VerboseLoggingConfigurationDto](#schemaverboseloggingconfigurationdto)|false|true|Data Transfer Object for verbose logging configuration information for a Transfer.|
 
 ```json
 {
@@ -6227,9 +6350,6 @@ Data Transfer Object for a Transfer.
   "LatestStreamingRead": "2019-08-24T14:15:22Z",
   "HistoricalDataEndTime": "2019-08-24T14:15:22Z",
   "TransferredElementsCount": 0,
-  "AssetsCreatedCount": 0,
-  "AssetsUpdatedCount": 0,
-  "AssetsFailedCount": 0,
   "OnPremTransferStatus": 0,
   "DesiredStatus": 0,
   "PIPointIds": [
@@ -6266,7 +6386,6 @@ Data Transfer Object for a Transfer.
   "TransferRevisionNumber": 0,
   "LastEditDate": "2019-08-24T14:15:22Z",
   "LastEditBy": "string",
-  "PointEdits": 0,
   "AutoDeleteCloudObjects": true,
   "TotalPointsInTransfer": 0,
   "StreamCreationStatus": {
@@ -6296,6 +6415,17 @@ Data Transfer Object for a Transfer.
     "CurrentArchive": 0,
     "TotalPointsInArchive": 0,
     "TransferredPointsForArchive": 0
+  },
+  "VerboseLoggingConfiguration": {
+    "TransferId": "string",
+    "Enabled": true,
+    "ExpirationDate": "2019-08-24T14:15:22Z",
+    "PIPointIdArray": [
+      0
+    ],
+    "AFElementIdArray": [
+      "string"
+    ]
   }
 }
 
@@ -6390,6 +6520,42 @@ Data Transfer Object for a Transfer.
 |Unknown|0|
 |ElementTooLarge|1|
 |RemovedOnSource|2|
+
+---
+
+### VerboseLoggingConfigurationDto
+
+<a id="schemaverboseloggingconfigurationdto"></a>
+<a id="schema_VerboseLoggingConfigurationDto"></a>
+<a id="tocSverboseloggingconfigurationdto"></a>
+<a id="tocsverboseloggingconfigurationdto"></a>
+
+Data Transfer Object for verbose logging configuration information for a Transfer.
+
+<h4>Properties</h4>
+
+|Property Name|Data Type|Required|Nullable|Description|
+|---|---|---|---|---|
+|TransferId|guid|false|true|None|
+|Enabled|boolean|false|true|None|
+|ExpirationDate|date-time|false|true|None|
+|PIPointIdArray|[integer]|false|true|None|
+|AFElementIdArray|string[]|false|true|None|
+
+```json
+{
+  "TransferId": "string",
+  "Enabled": true,
+  "ExpirationDate": "2019-08-24T14:15:22Z",
+  "PIPointIdArray": [
+    0
+  ],
+  "AFElementIdArray": [
+    "string"
+  ]
+}
+
+```
 
 ---
 
@@ -6898,6 +7064,7 @@ Data Transfer Object for creating a Transfer.
 |MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
 |TotalPointsInTransfer|int64|false|false|None|
 |AutoDeleteCloudObjects|boolean|false|false|None|
+|VerboseLoggingConfiguration|[VerboseLoggingConfigurationDto](#schemaverboseloggingconfigurationdto)|false|true|Data Transfer Object for verbose logging configuration information for a Transfer.|
 
 ```json
 {
@@ -6912,7 +7079,18 @@ Data Transfer Object for creating a Transfer.
   "Name": "string",
   "MetadataPrivacy": 0,
   "TotalPointsInTransfer": 0,
-  "AutoDeleteCloudObjects": true
+  "AutoDeleteCloudObjects": true,
+  "VerboseLoggingConfiguration": {
+    "TransferId": "string",
+    "Enabled": true,
+    "ExpirationDate": "2019-08-24T14:15:22Z",
+    "PIPointIdArray": [
+      0
+    ],
+    "AFElementIdArray": [
+      "string"
+    ]
+  }
 }
 
 ```
@@ -7072,6 +7250,8 @@ Data Transfer Object for a Transfer Update.
 |HistoricalDataStartTime|date-time|false|true|None|
 |ExpectedTransferRevisionNumber|int32|true|false|None|
 |AutoDeleteCloudObjects|boolean|false|true|None|
+|VerboseLoggingConfiguration|[VerboseLoggingConfigurationDto](#schemaverboseloggingconfigurationdto)|false|true|Data Transfer Object for verbose logging configuration information for a Transfer.|
+|TotalPointsInTransfer|int64|false|false|None|
 
 ```json
 {
@@ -7086,7 +7266,19 @@ Data Transfer Object for a Transfer Update.
   ],
   "HistoricalDataStartTime": "2019-08-24T14:15:22Z",
   "ExpectedTransferRevisionNumber": 0,
-  "AutoDeleteCloudObjects": true
+  "AutoDeleteCloudObjects": true,
+  "VerboseLoggingConfiguration": {
+    "TransferId": "string",
+    "Enabled": true,
+    "ExpirationDate": "2019-08-24T14:15:22Z",
+    "PIPointIdArray": [
+      0
+    ],
+    "AFElementIdArray": [
+      "string"
+    ]
+  },
+  "TotalPointsInTransfer": 0
 }
 
 ```
