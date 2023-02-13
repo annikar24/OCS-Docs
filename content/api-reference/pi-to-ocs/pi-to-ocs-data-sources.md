@@ -52,6 +52,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources
       "HostName": "string",
       "PISystem": {
         "ServerId": "string",
+        "Id": "string",
         "Name": "string",
         "Version": "string",
         "AFServerId": "string",
@@ -98,22 +99,22 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources
             "TotalPointsInTransfer": 0,
             "PIPointsWithHealthEvents": {
               "property1": {
-                "MaxSeverity": null,
-                "EventId": null
+                "MaxSeverity": "[",
+                "EventId": "["
               },
               "property2": {
-                "MaxSeverity": null,
-                "EventId": null
+                "MaxSeverity": "[",
+                "EventId": "["
               }
             },
             "AFElementsWithHealthEvents": {
               "property1": {
-                "MaxSeverity": null,
-                "EventId": null
+                "MaxSeverity": "[",
+                "EventId": "["
               },
               "property2": {
-                "MaxSeverity": null,
-                "EventId": null
+                "MaxSeverity": "[",
+                "EventId": "["
               }
             },
             "StreamCreationStatus": {
@@ -232,6 +233,7 @@ The DataSourceCreateUpdateDto to use when creating the DataSource.<br/>
     "HostName": "string",
     "PISystem": {
       "ServerId": "string",
+      "Id": "string",
       "Name": "string",
       "Version": "string",
       "AFServerId": "string",
@@ -280,22 +282,22 @@ The DataSourceCreateUpdateDto to use when creating the DataSource.<br/>
           "TotalPointsInTransfer": 0,
           "PIPointsWithHealthEvents": {
             "property1": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             },
             "property2": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             }
           },
           "AFElementsWithHealthEvents": {
             "property1": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             },
             "property2": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             }
           },
           "StreamCreationStatus": {
@@ -431,6 +433,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
     "HostName": "string",
     "PISystem": {
       "ServerId": "string",
+      "Id": "string",
       "Name": "string",
       "Version": "string",
       "AFServerId": "string",
@@ -479,22 +482,22 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
           "TotalPointsInTransfer": 0,
           "PIPointsWithHealthEvents": {
             "property1": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             },
             "property2": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             }
           },
           "AFElementsWithHealthEvents": {
             "property1": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             },
             "property2": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             }
           },
           "StreamCreationStatus": {
@@ -614,6 +617,7 @@ The new property values that will be set on the DataSource.<br/>
     "HostName": "string",
     "PISystem": {
       "ServerId": "string",
+      "Id": "string",
       "Name": "string",
       "Version": "string",
       "AFServerId": "string",
@@ -662,22 +666,22 @@ The new property values that will be set on the DataSource.<br/>
           "TotalPointsInTransfer": 0,
           "PIPointsWithHealthEvents": {
             "property1": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             },
             "property2": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             }
           },
           "AFElementsWithHealthEvents": {
             "property1": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             },
             "property2": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             }
           },
           "StreamCreationStatus": {
@@ -801,6 +805,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/PISystems
 [
   {
     "ServerId": "string",
+    "Id": "string",
     "Name": "string",
     "Version": "string",
     "AFServerId": "string",
@@ -995,6 +1000,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
   "HostName": "string",
   "PISystem": {
     "ServerId": "string",
+    "Id": "string",
     "Name": "string",
     "Version": "string",
     "AFServerId": "string",
@@ -1184,6 +1190,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 [
   {
     "ServerId": "string",
+    "Id": "string",
     "Name": "string",
     "Version": "string",
     "AFServerId": "string",
@@ -1307,6 +1314,7 @@ The PiSystem properties to update.<br/>
 ```json
 {
   "ServerId": "string",
+  "Id": "string",
   "Name": "string",
   "Version": "string",
   "AFServerId": "string",
@@ -1416,6 +1424,7 @@ The PiSystem properties to update.<br/>
 ```json
 {
   "ServerId": "string",
+  "Id": "string",
   "Name": "string",
   "Version": "string",
   "AFServerId": "string",
@@ -1548,6 +1557,7 @@ GET /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/{DataSour
 ```json
 {
   "ServerId": "string",
+  "Id": "string",
   "Name": "string",
   "Version": "string",
   "AFServerId": "string",
@@ -3503,6 +3513,7 @@ The PiSystem properties to update.<br/>
 ```json
 {
   "ServerId": "string",
+  "Id": "string",
   "Name": "string",
   "Version": "string",
   "AFServerId": "string",
@@ -3612,6 +3623,7 @@ The PiSystem properties to update.<br/>
 ```json
 {
   "ServerId": "string",
+  "Id": "string",
   "Name": "string",
   "Version": "string",
   "AFServerId": "string",
@@ -3734,6 +3746,7 @@ The PiSystem properties to update.<br/>
 ```json
 {
   "ServerId": "string",
+  "Id": "string",
   "Name": "string",
   "Version": "string",
   "AFServerId": "string",
@@ -3842,6 +3855,7 @@ The PiSystem properties to update.<br/>
 ```json
 {
   "ServerId": "string",
+  "Id": "string",
   "Name": "string",
   "Version": "string",
   "AFServerId": "string",
@@ -4263,8 +4277,6 @@ DELETE /api/v1/tenants/{tenantId}/namespaces/{namespaceId}/pi/DataSources/orphan
 <a id="tocSdatasourcedto"></a>
 <a id="tocsdatasourcedto"></a>
 
-Data Transfer Object for a Data Source.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -4274,7 +4286,7 @@ Data Transfer Object for a Data Source.
 |Description|string|false|true|None|
 |TenantId|guid|false|false|None|
 |OcsNamespace|string|false|true|None|
-|Agent|[AgentDto](#schemaagentdto)|false|true|Data Transfer Object for an Agent.|
+|Agent|[AgentDto](#schemaagentdto)|false|true|None|
 
 ```json
 {
@@ -4292,6 +4304,7 @@ Data Transfer Object for a Data Source.
     "HostName": "string",
     "PISystem": {
       "ServerId": "string",
+      "Id": "string",
       "Name": "string",
       "Version": "string",
       "AFServerId": "string",
@@ -4340,22 +4353,22 @@ Data Transfer Object for a Data Source.
           "TotalPointsInTransfer": 0,
           "PIPointsWithHealthEvents": {
             "property1": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             },
             "property2": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             }
           },
           "AFElementsWithHealthEvents": {
             "property1": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             },
             "property2": {
-              "MaxSeverity": null,
-              "EventId": null
+              "MaxSeverity": 0,
+              "EventId": 400001
             }
           },
           "StreamCreationStatus": {
@@ -4424,8 +4437,6 @@ Data Transfer Object for a Data Source.
 <a id="tocSagentdto"></a>
 <a id="tocsagentdto"></a>
 
-Data Transfer Object for an Agent.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -4436,11 +4447,11 @@ Data Transfer Object for an Agent.
 |Status|[AgentStatus](#schemaagentstatus)|false|false|None|
 |Description|string|false|true|None|
 |HostName|string|false|true|None|
-|PISystem|[PISystemDto](#schemapisystemdto)|false|true|Data Transfer Object for a PI System.|
+|PISystem|[PISystemDto](#schemapisystemdto)|false|true|None|
 |Namespace|string|false|true|None|
 |Region|string|false|true|None|
 |IsDeprecated|boolean|false|false|None|
-|TransferMetrics|[TransferMetricsDto](#schematransfermetricsdto)|false|true|Data Transfer Object for tracking metrics of a Transfer.|
+|TransferMetrics|[TransferMetricsDto](#schematransfermetricsdto)|false|true|None|
 
 ```json
 {
@@ -4452,6 +4463,7 @@ Data Transfer Object for an Agent.
   "HostName": "string",
   "PISystem": {
     "ServerId": "string",
+    "Id": "string",
     "Name": "string",
     "Version": "string",
     "AFServerId": "string",
@@ -4607,20 +4619,19 @@ Data Transfer Object for an Agent.
 <a id="tocSpisystemdto"></a>
 <a id="tocspisystemdto"></a>
 
-Data Transfer Object for a PI System.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
 |ServerId|guid|false|false|None|
+|Id|guid|false|false|None|
 |Name|string|false|true|None|
 |Version|string|false|true|None|
 |AFServerId|guid|false|false|None|
 |AFName|string|false|true|None|
 |AFVersion|string|false|true|None|
 |LastCommunicationTime|date-time|false|false|None|
-|Transfers|[[TransferSummaryDto](#schematransfersummarydto)]|false|true|[Data Transfer Object summarizing a Transfer.]|
+|Transfers|[[TransferSummaryDto](#schematransfersummarydto)]|false|true|None|
 |AFIndexProgress|[AFIndexProgress](#schemaafindexprogress)|false|false|None|
 |PIPointCacheProgress|[PIPointAttributeCacheProgress](#schemapipointattributecacheprogress)|false|false|None|
 |ElementsIndexed|int64|false|false|None|
@@ -4631,6 +4642,7 @@ Data Transfer Object for a PI System.
 ```json
 {
   "ServerId": "string",
+  "Id": "string",
   "Name": "string",
   "Version": "string",
   "AFServerId": "string",
@@ -4734,8 +4746,6 @@ Data Transfer Object for a PI System.
 <a id="tocStransfersummarydto"></a>
 <a id="tocstransfersummarydto"></a>
 
-Data Transfer Object summarizing a Transfer.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -4747,9 +4757,9 @@ Data Transfer Object summarizing a Transfer.
 |LatestStreamingRead|date-time|false|false|None|
 |OnPremTransferStatus|[TransferJobStatus](#schematransferjobstatus)|false|false|None|
 |PIPointCount|int32|false|false|None|
-|Metrics|[TransferMetricsDto](#schematransfermetricsdto)|false|true|Data Transfer Object for tracking metrics of a Transfer.|
+|Metrics|[TransferMetricsDto](#schematransfermetricsdto)|false|true|None|
 |Name|string|false|true|None|
-|MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
+|MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None|
 |TransferRevisionNumber|int32|false|false|None|
 |LastEditDate|date-time|false|false|None|
 |LastEditBy|guid|false|false|None|
@@ -4757,8 +4767,8 @@ Data Transfer Object summarizing a Transfer.
 |TotalPointsInTransfer|int64|false|false|None|
 |PIPointsWithHealthEvents|object|false|true|None|
 |AFElementsWithHealthEvents|object|false|true|None|
-|StreamCreationStatus|[DetailedStreamCreationStatus](#schemadetailedstreamcreationstatus)|false|true|None|
-|HistTransferProgress|[HistoricalTransferProgress](#schemahistoricaltransferprogress)|false|true|None|
+|StreamCreationStatus|[DetailedStreamCreationStatusDto](#schemadetailedstreamcreationstatusdto)|false|true|None|
+|HistTransferProgress|[HistoricalTransferProgressDto](#schemahistoricaltransferprogressdto)|false|true|None|
 
 ```json
 {
@@ -4897,8 +4907,6 @@ Data Transfer Object summarizing a Transfer.
 <a id="tocStransfermetricsdto"></a>
 <a id="tocstransfermetricsdto"></a>
 
-Data Transfer Object for tracking metrics of a Transfer.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -4961,17 +4969,15 @@ Data Transfer Object for tracking metrics of a Transfer.
 <a id="tocSdataprivacy"></a>
 <a id="tocsdataprivacy"></a>
 
-None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.
-
 <h4>Enumerated Values</h4>
 
 |Property|Value|Description|
 |---|---|---|
-|Undefined|0|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
-|Medium|1|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
-|None|2|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
-|High|3|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
-|Low|4|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
+|Undefined|0||
+|Medium|1||
+|None|2||
+|High|3||
+|Low|4||
 
 ---
 
@@ -4982,14 +4988,12 @@ None means all metadata is filtered out. Low filters all but 3 metadata items. M
 <a id="tocShealtheventsummarydto"></a>
 <a id="tocshealtheventsummarydto"></a>
 
-This class holds the highest severity among all health events for some object (currently either a point or element) and *some* eventId of a health event with this severity. There may be multiple health events of the highest severity, but we just need 1 event id to return to the UI for display.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
-|MaxSeverity|[LogLevel](#schemaloglevel)|false|false|The highest severity among all health events related to the object being summarized|
-|EventId|[EventIds](#schemaeventids)|false|false|The eventId of some health event with a severity equal to MaxSeverity associated with the object being summarized|
+|MaxSeverity|[LogLevel](#schemaloglevel)|false|false|None|
+|EventId|[EventIds](#schemaeventids)|false|false|None|
 
 ```json
 {
@@ -5786,12 +5790,12 @@ This class holds the highest severity among all health events for some object (c
 
 ---
 
-### DetailedStreamCreationStatus
+### DetailedStreamCreationStatusDto
 
-<a id="schemadetailedstreamcreationstatus"></a>
-<a id="schema_DetailedStreamCreationStatus"></a>
-<a id="tocSdetailedstreamcreationstatus"></a>
-<a id="tocsdetailedstreamcreationstatus"></a>
+<a id="schemadetailedstreamcreationstatusdto"></a>
+<a id="schema_DetailedStreamCreationStatusDto"></a>
+<a id="tocSdetailedstreamcreationstatusdto"></a>
+<a id="tocsdetailedstreamcreationstatusdto"></a>
 
 <h4>Properties</h4>
 
@@ -5857,12 +5861,12 @@ This class holds the highest severity among all health events for some object (c
 
 ---
 
-### HistoricalTransferProgress
+### HistoricalTransferProgressDto
 
-<a id="schemahistoricaltransferprogress"></a>
-<a id="schema_HistoricalTransferProgress"></a>
-<a id="tocShistoricaltransferprogress"></a>
-<a id="tocshistoricaltransferprogress"></a>
+<a id="schemahistoricaltransferprogressdto"></a>
+<a id="schema_HistoricalTransferProgressDto"></a>
+<a id="tocShistoricaltransferprogressdto"></a>
+<a id="tocshistoricaltransferprogressdto"></a>
 
 <h4>Properties</h4>
 
@@ -6009,16 +6013,14 @@ This class holds the highest severity among all health events for some object (c
 <a id="tocSagentstatusdto"></a>
 <a id="tocsagentstatusdto"></a>
 
-Data Transfer Object for different aspects of an Agent's status.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
-|Agent|[HealthDto](#schemahealthdto)|false|true|Data Transfer Object for Health information.|
-|AFIndexing|[HealthDto](#schemahealthdto)|false|true|Status of any/all indexing tasks of the Agent (e.g. Asset Framework Indexing)|
-|PIPointIndexing|[HealthDto](#schemahealthdto)|false|true|Data Transfer Object for Health information.|
-|Transfers|object|false|true|Status of each Transfer, keyed on the Transfer's ID|
+|Agent|[HealthDto](#schemahealthdto)|false|true|None|
+|AFIndexing|[HealthDto](#schemahealthdto)|false|true|None|
+|PIPointIndexing|[HealthDto](#schemahealthdto)|false|true|None|
+|Transfers|object|false|true|None|
 
 ```json
 {
@@ -6078,8 +6080,6 @@ Data Transfer Object for different aspects of an Agent's status.
 <a id="tocShealthdto"></a>
 <a id="tocshealthdto"></a>
 
-Data Transfer Object for Health information.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -6125,8 +6125,6 @@ Data Transfer Object for Health information.
 <a id="tocStransferhealthdto"></a>
 <a id="tocstransferhealthdto"></a>
 
-Data Transfer Object for Transfer edit information.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -6161,20 +6159,18 @@ Data Transfer Object for Transfer edit information.
 <a id="tocShealtheventdto"></a>
 <a id="tocshealtheventdto"></a>
 
-Data Transfer Object for a Health Event.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
 |Id|guid|false|false|None|
 |TimestampUtc|date-time|false|false|None|
-|Category|[HealthEventCategory](#schemahealtheventcategory)|false|false|The source of this health event|
+|Category|[HealthEventCategory](#schemahealtheventcategory)|false|false|None|
 |TransferId|guid|false|true|None|
 |EventId|[EventIds](#schemaeventids)|false|false|None|
 |Severity|[LogLevel](#schemaloglevel)|false|false|None|
 |Message|string|false|true|None|
-|PointId|int32|false|true|Optional fields for attaching additional information about the source/context of this health event|
+|PointId|int32|false|true|None|
 |ElementId|guid|false|true|None|
 
 ```json
@@ -6246,8 +6242,8 @@ Data Transfer Object for a Health Event.
 |LatestStreamingRead|date-time|false|false|None|
 |HistoricalDataStartTime|date-time|false|false|None|
 |HistoricalDataEndTime|date-time|false|false|None|
-|HistTransferProgress|[HistoricalTransferProgress](#schemahistoricaltransferprogress)|false|true|None|
-|StreamCreationStatus|[DetailedStreamCreationStatus](#schemadetailedstreamcreationstatus)|false|true|None|
+|HistTransferProgress|[HistoricalTransferProgressDto](#schemahistoricaltransferprogressdto)|false|true|None|
+|StreamCreationStatus|[DetailedStreamCreationStatusDto](#schemadetailedstreamcreationstatusdto)|false|true|None|
 |IsModified|boolean|false|false|None|
 
 ```json
@@ -6304,8 +6300,6 @@ Data Transfer Object for a Health Event.
 <a id="tocStransferdto"></a>
 <a id="tocstransferdto"></a>
 
-Data Transfer Object for a Transfer.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -6327,17 +6321,17 @@ Data Transfer Object for a Transfer.
 |PIPointsWithHealthEvents|object|false|true|None|
 |AFElementsWithHealthEvents|object|false|true|None|
 |Name|string|false|true|None|
-|MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
+|MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None|
 |TransferRevisionNumber|int32|false|false|None|
 |LastEditDate|date-time|false|false|None|
 |LastEditBy|guid|false|false|None|
 |AutoDeleteCloudObjects|boolean|false|false|None|
 |TotalPointsInTransfer|int64|false|false|None|
-|StreamCreationStatus|[DetailedStreamCreationStatus](#schemadetailedstreamcreationstatus)|false|true|None|
+|StreamCreationStatus|[DetailedStreamCreationStatusDto](#schemadetailedstreamcreationstatusdto)|false|true|None|
 |StreamErrors|[[StreamError](#schemastreamerror)]|false|true|None|
 |AssetErrors|[[AssetError](#schemaasseterror)]|false|true|None|
-|HistTransferProgress|[HistoricalTransferProgress](#schemahistoricaltransferprogress)|false|true|None|
-|VerboseLoggingConfiguration|[VerboseLoggingConfigurationDto](#schemaverboseloggingconfigurationdto)|false|true|Data Transfer Object for verbose logging configuration information for a Transfer.|
+|HistTransferProgress|[HistoricalTransferProgressDto](#schemahistoricaltransferprogressdto)|false|true|None|
+|VerboseLoggingConfiguration|[VerboseLoggingConfigurationDto](#schemaverboseloggingconfigurationdto)|false|true|None|
 
 ```json
 {
@@ -6530,8 +6524,6 @@ Data Transfer Object for a Transfer.
 <a id="tocSverboseloggingconfigurationdto"></a>
 <a id="tocsverboseloggingconfigurationdto"></a>
 
-Data Transfer Object for verbose logging configuration information for a Transfer.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -6566,16 +6558,14 @@ Data Transfer Object for verbose logging configuration information for a Transfe
 <a id="tocSquerydto"></a>
 <a id="tocsquerydto"></a>
 
-Data Transfer Object for a Query.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
 |Id|guid|false|false|None|
 |QueryType|[QueryTypes](#schemaquerytypes)|false|false|None|
-|PI|[QueryPIDto](#schemaquerypidto)|false|true|Data Transfer Object for PI information for a Query.|
-|AF|[QueryAFDto](#schemaqueryafdto)|false|true|Data Transfer Object for AF Information for a Query.|
+|PI|[QueryPIDto](#schemaquerypidto)|false|true|None|
+|AF|[QueryAFDto](#schemaqueryafdto)|false|true|None|
 |Status|[QueryStatus](#schemaquerystatus)|false|false|None|
 |Skip|int32|false|false|None|
 |Count|int32|false|false|None|
@@ -6655,15 +6645,13 @@ Data Transfer Object for a Query.
 <a id="tocSquerypidto"></a>
 <a id="tocsquerypidto"></a>
 
-Data Transfer Object for PI information for a Query.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
 |PointMasks|object|false|true|None|
 |PointIds|[integer]|false|true|None|
-|PointList|[QueryPIPointListExDto](#schemaquerypipointlistexdto)|false|true|Data Transfer Object for PI Point Lists.|
+|PointList|[QueryPIPointListExDto](#schemaquerypipointlistexdto)|false|true|None|
 
 ```json
 {
@@ -6693,13 +6681,11 @@ Data Transfer Object for PI information for a Query.
 <a id="tocSquerypipointlistexdto"></a>
 <a id="tocsquerypipointlistexdto"></a>
 
-Data Transfer Object for PI Point Lists.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
-|MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
+|MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None|
 |PointIds|[integer]|false|true|None|
 
 ```json
@@ -6720,8 +6706,6 @@ Data Transfer Object for PI Point Lists.
 <a id="schema_QueryAFDto"></a>
 <a id="tocSqueryafdto"></a>
 <a id="tocsqueryafdto"></a>
-
-Data Transfer Object for AF Information for a Query.
 
 <h4>Properties</h4>
 
@@ -6819,8 +6803,6 @@ Data Transfer Object for AF Information for a Query.
 <a id="tocSpipointquerydto"></a>
 <a id="tocspipointquerydto"></a>
 
-Data Transfer Object for a PI Point Query.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -6867,8 +6849,6 @@ Data Transfer Object for a PI Point Query.
 <a id="tocSqueryresultpagedto"></a>
 <a id="tocsqueryresultpagedto"></a>
 
-Data Transfer Object for a Query Result.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -6897,8 +6877,6 @@ Data Transfer Object for a Query Result.
 <a id="schema_QueryStatusDto"></a>
 <a id="tocSquerystatusdto"></a>
 <a id="tocsquerystatusdto"></a>
-
-Data Transfer Object for the status of a Query.
 
 <h4>Properties</h4>
 
@@ -6935,8 +6913,6 @@ Data Transfer Object for the status of a Query.
 <a id="schema_PIPointQueryResultDto"></a>
 <a id="tocSpipointqueryresultdto"></a>
 <a id="tocspipointqueryresultdto"></a>
-
-Data Transfer Object for a PI Point Query Result.
 
 <h4>Properties</h4>
 
@@ -7024,8 +7000,6 @@ Data Transfer Object for a PI Point Query Result.
 <a id="tocSdatasourcecreateupdatedto"></a>
 <a id="tocsdatasourcecreateupdatedto"></a>
 
-Data Transfer Object for creating or updating a Data Source.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -7050,8 +7024,6 @@ Data Transfer Object for creating or updating a Data Source.
 <a id="tocStransfercreatedto"></a>
 <a id="tocstransfercreatedto"></a>
 
-Data Transfer Object for creating a Transfer.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -7061,10 +7033,10 @@ Data Transfer Object for creating a Transfer.
 |PIPointIds|[integer]|false|true|None|
 |AFElementIds|string[]|false|true|None|
 |Name|string|false|true|None|
-|MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
+|MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None|
 |TotalPointsInTransfer|int64|false|false|None|
 |AutoDeleteCloudObjects|boolean|false|false|None|
-|VerboseLoggingConfiguration|[VerboseLoggingConfigurationDto](#schemaverboseloggingconfigurationdto)|false|true|Data Transfer Object for verbose logging configuration information for a Transfer.|
+|VerboseLoggingConfiguration|[VerboseLoggingConfigurationDto](#schemaverboseloggingconfigurationdto)|false|true|None|
 
 ```json
 {
@@ -7104,15 +7076,13 @@ Data Transfer Object for creating a Transfer.
 <a id="tocSquerycreateupdatedto"></a>
 <a id="tocsquerycreateupdatedto"></a>
 
-Data Transfer Object for creating or updating a Query.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
 |QueryType|[QueryTypes](#schemaquerytypes)|false|true|None|
-|PI|[QueryPIDto](#schemaquerypidto)|false|true|Data Transfer Object for PI information for a Query.|
-|AF|[QueryAFDto](#schemaqueryafdto)|false|true|Data Transfer Object for AF Information for a Query.|
+|PI|[QueryPIDto](#schemaquerypidto)|false|true|None|
+|AF|[QueryAFDto](#schemaqueryafdto)|false|true|None|
 |Skip|int32|false|false|None|
 |Count|int32|false|false|None|
 
@@ -7162,8 +7132,6 @@ Data Transfer Object for creating or updating a Query.
 <a id="tocSpatchdto"></a>
 <a id="tocspatchdto"></a>
 
-Data Transfer Object for a Patch.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -7210,8 +7178,6 @@ Data Transfer Object for a Patch.
 <a id="tocSpipointquerycreateupdatedto"></a>
 <a id="tocspipointquerycreateupdatedto"></a>
 
-Data Transfer Object to create or update a PI Point Query.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
@@ -7236,21 +7202,19 @@ Data Transfer Object to create or update a PI Point Query.
 <a id="tocStransferupdatedto"></a>
 <a id="tocstransferupdatedto"></a>
 
-Data Transfer Object for a Transfer Update.
-
 <h4>Properties</h4>
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
 |Description|string|false|true|None|
 |Name|string|false|true|None|
-|MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None means all metadata is filtered out. Low filters all but 3 metadata items. Medium only filters out 2 metadata items. High means no data is filtered out.|
+|MetadataPrivacy|[DataPrivacy](#schemadataprivacy)|false|false|None|
 |PIPointIds|[integer]|false|true|None|
 |AFElementIds|string[]|false|true|None|
 |HistoricalDataStartTime|date-time|false|true|None|
 |ExpectedTransferRevisionNumber|int32|true|false|None|
 |AutoDeleteCloudObjects|boolean|false|true|None|
-|VerboseLoggingConfiguration|[VerboseLoggingConfigurationDto](#schemaverboseloggingconfigurationdto)|false|true|Data Transfer Object for verbose logging configuration information for a Transfer.|
+|VerboseLoggingConfiguration|[VerboseLoggingConfigurationDto](#schemaverboseloggingconfigurationdto)|false|true|None|
 |TotalPointsInTransfer|int64|false|false|None|
 
 ```json
@@ -7291,8 +7255,6 @@ Data Transfer Object for a Transfer Update.
 <a id="schema_TransferUpdateStatusDto"></a>
 <a id="tocStransferupdatestatusdto"></a>
 <a id="tocstransferupdatestatusdto"></a>
-
-Data Transfer Object for the status of a Transfer Update.
 
 <h4>Properties</h4>
 
