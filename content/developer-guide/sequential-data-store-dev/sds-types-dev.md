@@ -765,7 +765,8 @@ Further type creations can reference them as shown above.
 Note that when trying to get types back from the SDS, the results will also include types that were automatically created by the SDS.
 
 Base types and properties of type `object`, `enum`, or user-defined collections such as `array`, `list` and `dictionary`,
-will be treated as referenced types. Note that streams cannot be created using these referenced types.
+will be treated as referenced types. Note that streams cannot be created using these referenced types.  In nested collections, there is a limit as to how deep the object can be nested, with a maximum limit of depth 32 placed on the entire JSON object.  
+If a request is sent with an object depth larger than the maximum depth limit, a bad request will be returned with a response indicating the current max depth limit.
 If a stream of a particular type is to be created, the type should contain at least one property
 with a valid index type as described in the [Indexes](xref:sdsIndexes) section. 
 The index property may also be in the base type as shown in the example above.
